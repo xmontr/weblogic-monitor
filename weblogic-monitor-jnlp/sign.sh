@@ -1,0 +1,1 @@
+/cygdrive/c/PROGRA~1/Java/jdk1.6.0_31/bin/jarsigner.exe -verbose -keystore F:/bin/eclipse3.7_4mven/keystore4testcentre -storepass testcentre -keypass xaviermontrichard -storetype jks -signedjar  montrichard  

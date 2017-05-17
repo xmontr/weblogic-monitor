@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://158.167.8.251:7003/webstart-war/webstart" href="$outputFile">
+ <information>
+    <title>ServletDeployer</title>
+    <vendor>ServletDeployer Team</vendor>
+    <homepage href="http://158.167.8.251:7003/webstart-war/webstart"/>
+    <description kind="one-line">ServletDeployer</description>
+    <description kind="short">ServletDeployer</description>
+    <description kind="tooltip">Jmx Servlet Deployer</description>
+    <icon href="http://openiconlibrary.sourceforge.net/gallery2/open_icon_library-full/icons/png/64x64/categories/applications-development-translation.png" kind="default"/>
+    <shortcut online="false"><desktop/><menu submenu="ServletDeployer"/></shortcut>
+ </information>
+ <security>
+ <all-permissions/>
+ </security>
+ <resources>
+    <j2se version="1.6+"  initial-heap-size="128m" max-heap-size="256m" />
+    <property name="jnlp.versionEnabled" value="false"/>
+    
+	<jar href="wlfullclient-10.3.jar" />
+    <jar href="weblogic-monitor-deployer-0.0.1-SNAPSHOT.jar" main="true"/>
+
+ </resources>
+ <application-desc main-class="$mainClass">
+ </application-desc>
+</jnlp>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="type.monitor.cec" xmlns:tns="type.monitor.cec" xmlns="http://www.w3.org/2001/XMLSchema">
+    <complexType name="MonitorConfig">
+    	<sequence>
+    		<element name="counter" type="tns:Counter" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    
+    <complexType name="Attribut">
+    	<sequence>
+    		<element name="jmxAttribut" type="string"></element>
+    		<element name="description" type="string"></element>
+    		<element name="name" type="string"></element>
+    		<element name="keys" type="tns:CompositeValue" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    	<attribute name="isComposite" type="boolean" use="optional"></attribute>
+    </complexType>
+
+    <complexType name="Counter">
+    	<sequence>
+    		<element name="jmxObjectName" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="jmxType" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="attribut" type="tns:Attribut"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+
+    <element name="monitorConfig" type="tns:MonitorConfig"></element>
+
+    <complexType name="CompositeValue">
+    	<sequence>
+    		<element name="key" type="string"></element>
+    		<element name="description" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

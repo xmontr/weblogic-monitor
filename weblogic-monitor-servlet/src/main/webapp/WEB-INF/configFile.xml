@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:monitorConfig xmlns:tns="type.monitor.cec" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="type.monitor.cec jmxMonitor.xsd ">
+  <counter>
+    <jmxObjectName>java.lang:type=MemoryPool,name=Eden Space</jmxObjectName>
+    <attribut isComposite="true">
+      <jmxAttribut>CollectionUsage</jmxAttribut>
+      <description>CollectionUsage</description>
+      <name>CollectionUsage</name>
+      <keys>
+    	  <key>used</key>
+       	<description> Eden Space:used 	</description>
+       </keys>    
+             <keys>
+    	  <key>max</key>
+       	<description> Eden Space:max 	</description>
+       </keys> 
+    </attribut>
+    <attribut >
+          <jmxAttribut>CollectionUsageThreshold</jmxAttribut>
+      <description>CollectionUsageThreshold</description>
+      <name>CollectionUsageThreshold</name>
+    </attribut >
+  </counter>
+</tns:monitorConfig>
